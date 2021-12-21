@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/suvojit-0x55aa/dev-challenges-my-gallery">
       Solution
     </a>
     <span> | </span>
