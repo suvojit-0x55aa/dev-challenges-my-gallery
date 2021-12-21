@@ -1,0 +1,140 @@
+$default-font: 'Montserrat',
+sans-serif;
+$max-board-width: 870px;
+$standard-border-radius: 12px;
+.board {
+    width: 80vw;
+    max-width: $max-board-width;
+    margin: 0 auto;
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.header {
+    width: 30%;
+    min-width: 184px;
+    margin: 0 auto;
+    margin-top: 7vh;
+    img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        border-radius: $standard-border-radius;
+    }
+    p {
+        text-align: center;
+        display: block;
+    }
+    .name {
+        margin: 0.5rem auto 0.2rem auto;
+        font-size: 1.5rem;
+        color: #4E5150;
+    }
+    .location {
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: #A9A9A9;
+        margin: 0.2rem auto 1rem auto;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 5vw;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    .stat {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 7rem;
+        height: 4rem;
+        background-color: #E5E5E5;
+        border-radius: $standard-border-radius;
+        // padding: 0 0.7rem;
+        .div {
+            margin: 0.2rem 0;
+        }
+        .number {
+            font-size: 1.1rem;
+            color: #4E5150;
+        }
+        .metric {
+            font-size: 0.8rem;
+            color: #BDBDBD;
+        }
+    }
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes contract {
+    0% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-rows: repeat(3, 1fr);
+    .photo {
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15));
+    }
+    // .photo:hover {
+    //     animation: expand 150ms ease-out forwards;
+    // }
+    .photo img {
+        border-radius: $standard-border-radius;
+        width: 100%;
+        height: 100%;
+        // box-sizing: border-box;
+    }
+    .photo-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .photo-2 {
+        grid-row: 1;
+        grid-column: 2/4;
+    }
+    .photo-3 {
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+    .photo-4 {
+        grid-row: 2/4;
+        grid-column: 3;
+    }
+    .photo-5 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .photo-6 {
+        grid-row: 3;
+        grid-column: 2;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .board {
+        width: 95vw;
+        margin-top: 3vh;
+    }
+}

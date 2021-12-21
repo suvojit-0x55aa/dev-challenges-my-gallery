@@ -1,0 +1,11 @@
+{
+    "hosting": {
+        "site": "dev-challenges-my-gallery",
+        "public": "public",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }
+}
